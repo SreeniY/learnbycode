@@ -1,27 +1,30 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class WordCountPP {
 
 	
-	/)Write a program to read a word from a file and count the duplicate word
+	/*)Write a program to read a word from a file and count the duplicate word
 	Sort by most repeated
 	Input: Paypal
 	A:2,L:1,
-	)/
+	)*/
 
-	public Map<String, Integer> wordCount(Sring lineOfWords){
+	public Map<String, Integer> wordCount(String lineOfWords){
 
 	//List<String> wordsInLine = new ArrayList<String>();
 	  Map<String, Integer> returnMap = new HashMap<String, Integer>();
 	 String givenLine  = lineOfWords;
 	 while(givenLine == null){
-	     String fetchedWord = givenLine.subStrig(1, ''); //get the first wrod with a space as end char.
-	     returnMap.add(ftchedWord, returnMap.get((ftchedWord)+1L));
-	     if(returnMap.cntains(fetchedWord ){
-	         returnMap.add(ftchedWord, returnMap.get((ftchedWord)+1L));
+	     String fetchedWord = givenLine.substring(1, ' '); //get the first wrod with a space as end char.
+	     
+	     returnMap.put(fetchedWord, new Integer(returnMap.get(fetchedWord).intValue() + 1));
+	     if(returnMap.contains(fetchedWord){
+	         returnMap.put(fetchedWord,  new Integer(returnMap.get(fetchedWord).intValue() + 1));
 	     }else{
-	         returnMap.add(ftchedWord,1L));
+	         returnMap.put(ftchedWord,new Integer(1)));
 	     }
-	     givenLine =  givenLine.subString(''); //Assuming this give the rest of the words line after the first space
+	     givenLine =  givenLine.substring(''); //Assuming this give the rest of the words line after the first space
 	     
 	 }
 	 
